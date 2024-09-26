@@ -20,8 +20,6 @@ PostgreSQL: Make sure PostgreSQL is running on your local machine.
 
 # Clone the repository:
 
-git clone https://github.com/Ahsan1447/google_calendar_events.git
-cd google_calendar_events
 
 # Install the required gems and dependencies:
 
