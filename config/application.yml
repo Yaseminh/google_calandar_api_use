@@ -1,0 +1,6 @@
+google_client_id: "62158956784-42d1m6snm7jvertajr2robceb6ng4ui8.apps.googleusercontent.com"
+google_client_secret: "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"
+redirect_uri: "http://localhost:3000/auth/callback"
+client_secret: "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"
+google_client_secret: "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"
+GOOGLE_CLIENT_SECRET: "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"

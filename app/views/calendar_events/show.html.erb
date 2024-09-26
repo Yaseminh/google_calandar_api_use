@@ -1,0 +1,7 @@
+<h1><%= @calendar_event.summary %></h1>
+<p><strong>Description:</strong> <%= @calendar_event.description %></p>
+<p><strong>Start Time:</strong> <%= @calendar_event.start_time %></p>
+<p><strong>End Time:</strong> <%= @calendar_event.end_time %></p>
+
+<%= link_to 'Delete', calendar_event_path(@calendar_event), method: :delete, data: { confirm: 'Are you sure you want to delete this event?' } %>
+<%= link_to 'Back', calendar_events_path %>

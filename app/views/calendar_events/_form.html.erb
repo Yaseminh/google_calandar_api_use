@@ -1,0 +1,35 @@
+<div class="my-3 pt-2">
+  <div class="mx-auto" style="max-width: 30rem;">  
+    <%= form_with(model: event) do |form| %>
+      <div class="turbo-fame-tag">
+      <%= turbo_frame_tag 'event-errors' do %>
+        <%= render partial: 'events/errors', locals: { event: event } %>
+      <% end %>
+      <div class="form-group">
+        <strong><%= form.label :title %></strong>
+        <%= form.text_field :title ,class: "form-control", placeholder: "title" %>
+      </div>
+      <div class="form-group pt-3">
+        <strong> <%=  form.label :discription %></strong>
+        <%= form.text_area :description ,class: "form-control", size: "5x5", placeholder: "discription" %>
+      </div>
+      <div class="form-group pt-3">
+        <strong><%= form.label :location %></strong>
+        <%= form.text_field :location, class: "form-control" %>
+      </div>
+      <div class="form-group pt-3 ">
+        <strong><%= form.label :start_at %></strong>
+        <%= form.text_field :start_at, class: 'form-control datetimepicker', data: { controller:  "flatpickr" } %>
+      </div>
+      <div class="form-group pt-3 ">
+        <strong><%= form.label :end_at %></strong>
+        <%= form.text_field :end_at, class: 'form-control datetimepicker', data: { controller:  "flatpickr" } %>
+      </div>
+      <%= form.hidden_field :user_id, value: session[:user_id] %>
+      <div class="actions my-4">
+        <%= form.submit 'Submit', class: "btn btn-outline-success" %>
+        <%= link_to 'Cancel', events_path, class: "btn btn-outline-danger" %>
+      </div>
+    <% end %>
+  </div>
+</div>

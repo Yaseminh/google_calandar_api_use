@@ -1,0 +1,3 @@
+<%= turbo_stream.update "event-errors" do %>
+  <%= render partial: 'events/errors', locals: { event: @event } %>
+<% end %>
